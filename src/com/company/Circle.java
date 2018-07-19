@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 /**
  * created by s.a.miroshnychenko 7/16/2018
  */
@@ -14,6 +16,22 @@ public class Circle extends Shape{
         this.x = x;
         this.y = y;
         this.r = r;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Circle circle = (Circle) o;
+        return x == circle.x &&
+                y == circle.y &&
+                r == circle.r;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(x, y, r);
     }
 
     @Override
