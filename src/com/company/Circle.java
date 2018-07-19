@@ -45,7 +45,7 @@ public class Circle extends Shape{
                 "x=" + x +
                 ", y=" + y +
                 ", r=" + r +
-                "} " + super.toString();
+                "} ";
     }
 
 }

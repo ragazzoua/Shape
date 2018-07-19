@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 /**
  * created by s.a.miroshnychenko 7/16/2018
  */
@@ -27,7 +29,23 @@ public class Rectangle extends Shape {
                 ", y=" + y +
                 ", j=" + j +
                 ", z=" + z +
-                "} " + super.toString();
+                '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rectangle rectangle = (Rectangle) o;
+        return x == rectangle.x &&
+                y == rectangle.y &&
+                j == rectangle.j &&
+                z == rectangle.z;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(x, y, j, z);
+    }
 }
