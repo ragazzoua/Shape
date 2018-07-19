@@ -19,4 +19,15 @@ public class Rectangle extends Shape {
     public void draw() {
         System.out.println("Rectangle");
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "x=" + x +
+                ", y=" + y +
+                ", j=" + j +
+                ", z=" + z +
+                "} " + super.toString();
+    }
+
 }
