@@ -7,6 +7,15 @@ package com.company;
 public class A {
     int a;
     int b;
+    static int c;
+
+    static void  m(){
+        System.out.println("static");
+    }
+
+    void s(){
+        System.out.println("no static");
+    }
 
     @Override
     public String toString() {
